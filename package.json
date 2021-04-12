@@ -1,0 +1,14 @@
+{
+  "name": "wbdv-sp21-yonathan-michael-server-node",
+  "version": "1.0.0",
+  "description": "Node Server for Web Dev Class",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Yonathan Michael",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
