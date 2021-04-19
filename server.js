@@ -4,12 +4,13 @@ var bodyParser = require("body-parser");
 
 const mongoose = require("mongoose");
 
-const uri = process.env.MONGODB_URI;
-
-mongoose.connect(uri, {
-	useNewUrlParser: true,
-	useUnifiedTopology: true,
-});
+mongoose.connect(
+	"mongodb+srv://yonathan-admin:webdev-2021@cluster0.dyjo5.mongodb.net/whiteboard?retryWrites=true&w=majority",
+	{
+		useNewUrlParser: true,
+		useUnifiedTopology: true,
+	}
+);
 
 // configure CORS
 app.use(function (req, res, next) {
