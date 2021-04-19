@@ -3,7 +3,10 @@ var app = express();
 var bodyParser = require("body-parser");
 
 const mongoose = require("mongoose");
-mongoose.connect("mongodb://localhost:27017/whiteboard", {
+
+const uri = process.env.MONGODB_URI;
+
+mongoose.connect(uri, {
 	useNewUrlParser: true,
 	useUnifiedTopology: true,
 });
