@@ -1,5 +1,6 @@
 var express = require("express");
 var app = express();
+var bodyParser = require("body-parser");
 
 const mongoose = require("mongoose");
 mongoose.connect("mongodb://localhost:27017/whiteboard", {
@@ -20,6 +21,9 @@ app.use(function (req, res, next) {
 	);
 	next();
 });
+
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
 require("./controllers/quizzes-controller")(app);
 
